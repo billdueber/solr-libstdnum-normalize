@@ -32,7 +32,8 @@ bc. <field name="isbn" type="ISBNLong" indexed="true" stored="true" multiValued=
 
 h2. LCCNNormalizer
 
-LCCNs have "a canonical normalization process":http://www.loc.gov/marc/lccn-namespace.html#syntax that I follow here. Not a ton of effort is done to try to clean things up -- the idea is that you have a pretty good idea that you have an LCCN before calling this code.
+LCCNs have 
+"a canonical normalization process":http://www.loc.gov/marc/lccn-namespace.html#syntax that I follow here. Not a ton of effort is done to try to clean things up -- the idea is that you have a pretty good idea that you have an LCCN before calling this code.
 
 bc. <!-- LCCN normalization on both index and query -->
      <fieldType name="lccnnormalizer" class="solr.TextField"  omitNorms="true">
