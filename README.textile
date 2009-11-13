@@ -48,7 +48,7 @@ bc.. <!-- LCCN normalization on both index and query -->
    ...and later
   <field name="lccn"    type="lccnnormalizer" indexed="true" stored="true"/> 
 
-
+p.
 h2. LC Call Number Normalization
 
 My LCCNCallNumberNormalizer is not the best one around -- check out the stuff in the Blacklight project for something more robust. 
