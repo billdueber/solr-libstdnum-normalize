@@ -81,6 +81,7 @@ bc. import edu.umich.lib.hlb.HLB;
     }
     return hlb3components;
   }
+
 bc.
   public Set<String> getHLB3Delimited(final Record record) {
     Set<String> callNums = getFieldList(record, "050ab:082a:090ab:099a:086a:086z:852hij");
