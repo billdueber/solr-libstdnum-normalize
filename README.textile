@@ -69,7 +69,7 @@ pre. import edu.umich.lib.hlb.HLB;
     public Set<String> getHLB3(final Record record) {
     Set<String> callNums = getFieldList(record, "050ab:082a:090ab:099a:086a:086z:852hij");
     Iterator<String> callNumsIter = callNums.iterator();
-
+    
     Set<String> hlb3components = new LinkedHashSet<String>();
     while (callNumsIter.hasNext()) {
             String callNum = (String) callNumsIter.next();
@@ -81,8 +81,7 @@ pre. import edu.umich.lib.hlb.HLB;
     }
     return hlb3components;
   }
-
-pre.
+  
   public Set<String> getHLB3Delimited(final Record record) {
     Set<String> callNums = getFieldList(record, "050ab:082a:090ab:099a:086a:086z:852hij");
     Iterator<String> callNumsIter = callNums.iterator();
