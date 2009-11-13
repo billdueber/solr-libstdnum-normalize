@@ -64,9 +64,11 @@ The HLB and RangeSet classes both need to be accessible -- in our setup, I've ad
 
 We use it like this:
 
-bc.. import edu.umich.lib.hlb.HLB;
+bc.. 
+
+ import edu.umich.lib.hlb.HLB;
  ... 
-    public Set<String> getHLB3(final Record record) {
+ public Set<String> getHLB3(final Record record) {
     Set<String> callNums = getFieldList(record, "050ab:082a:090ab:099a:086a:086z:852hij");
     Iterator<String> callNumsIter = callNums.iterator();
     
