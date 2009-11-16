@@ -8,7 +8,7 @@ For the solr normalizers, just put the .jar file somewhere your java container (
 
 h1. What Solr filters are here?
 
-These Solr text filters are designed to be run at both index and query time. This, hopefully, allows you to not care what (valid) format your users enter their data in (so, for example, an ISBN10 will get a positive search on the equivalent ISBN13 and vice-versa). Both filters are designed to pass through unchanged anything that doesn't seem like a valid identifier of teh appropriate type.
+These Solr text filters are designed to be run at both index and query time. This, hopefully, allows you to not care what (valid) format your users enter their data in (so, for example, an ISBN10 will get a positive search on the equivalent ISBN13 and vice-versa). Both filters are designed to pass through unchanged anything that doesn't seem like a valid identifier of the appropriate type.
 
 h2. ISBNLongifier -- turn all ISBNs into ISBN13
 
