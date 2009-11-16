@@ -10,4 +10,4 @@ The High Level Browse stuff just needs to be compiled and included in whatever y
 
 h2. How to call the methods
 
-See the wiki pages at [http://wiki.github.com/billdueber/lib.umich.edu-solr-stuff](http://wiki.github.com/billdueber/lib.umich.edu-solr-stuff) for information on how to use these methods.
+See the wiki pages at "http://wiki.github.com/billdueber/lib.umich.edu-solr-stuff":http://wiki.github.com/billdueber/lib.umich.edu-solr-stuff for information on how to use these methods.
