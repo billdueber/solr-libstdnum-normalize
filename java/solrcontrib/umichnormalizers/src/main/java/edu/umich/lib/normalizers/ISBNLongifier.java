@@ -15,8 +15,8 @@ public class ISBNLongifier {
 
     private static String  ISBNDelimiiterPattern = "[\\-\\.]";
     //    private static Pattern ISBNPattern = Pattern.compile("^.*?(\\d{9})[\\dXx].*$");
-    private static Pattern ISBNPattern = Pattern.compile("^.*\\b(\\d{9})[\\dXx](?:\\Z|\\D).*$");
-    private static Pattern LongISBNPattern = Pattern.compile("^.*\\b(\\d{13}).*$");
+    private static Pattern ISBNPattern = Pattern.compile("^.*?(?:\\A|\\D)(\\d{9})[\\dXx](?:\\Z|\\D).*$");
+    private static Pattern LongISBNPattern = Pattern.compile("^.*?(?:\\A|\\D)(\\d{13})(?:\\Z|\\D).*$");
     //    private static Pattern ISBN13Pattern = Pattern.compile("^.*?\\d{13}.*$");
 
     public static Boolean matches(String isbn) throws IllegalArgumentException {
@@ -28,18 +28,22 @@ public class ISBNLongifier {
     }
 
     public static String longify(String isbn) {
+      // System.out.println("Longifying " + isbn);
         isbn = isbn.replaceAll(ISBNDelimiiterPattern, "");
         
         // Does it match a long one? If so, return it
         Matcher m = LongISBNPattern.matcher(isbn);
         if (m.matches()) {
-          System.out.println(isbn + " is long");
+          // System.out.println(isbn + " is long");
           return m.group(1);
         }
 	//        System.out.println(isbn);
         m = ISBNPattern.matcher(isbn);
         if (!m.matches()) {
+          // System.out.println(isbn + " did not match");
             throw new IllegalArgumentException(isbn + ": Not an ISBN");
+        } else {
+          // System.out.println(isbn + " did match");
         }
 	//        Matcher m2 = ISBN13Pattern.matcher(isbn);
 	//        if (m2.matches()) {
