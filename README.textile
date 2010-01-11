@@ -38,8 +38,6 @@ bc. <!-- LCCN normalization on both index and query -->
      <fieldType name="lccnnormalizer" class="solr.TextField"  omitNorms="true">
        <analyzer>
          <tokenizer class="solr.KeywordTokenizerFactory"/> 
-         <filter class="solr.LowerCaseFilterFactory"/>
-         <filter class="solr.TrimFilterFactory"/>
          <filter class="edu.umich.lib.solr.analysis.LCCNNormalizerFilterFactory"/> 
        </analyzer>
      </fieldType>
