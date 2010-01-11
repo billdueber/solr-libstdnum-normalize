@@ -52,6 +52,10 @@ public final class LCCNNormalizerFilter extends org.apache.lucene.analysis.Token
     // First, ditch the spaces
     val = val.replaceAll("\\s+", "");
     
+    // .. and lowercase
+    
+    val = val.toLowerCase();
+    
     // Lose any trailing slash-plus-characters
     Matcher ts = trailingslashpattern.matcher(val);
     if (ts.matches()) {
