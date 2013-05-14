@@ -5,24 +5,19 @@
 
 package edu.umich.lib.solr.analysis;
 import java.util.Map;
-import org.apache.solr.analysis.BaseTokenFilterFactory;
+import org.apache.lucene.analysis.util.TokenFilterFactory;
 import org.apache.lucene.analysis.TokenStream;
 
 /**
  *
  * @author dueberb
  */
-public class LCCallNumberNormalizerFilterFactory extends BaseTokenFilterFactory {
-    Map<String,String> args;
+public class LCCallNumberNormalizerFilterFactory extends TokenFilterFactory {
+	
+    protected LCCallNumberNormalizerFilterFactory(Map<String, String> args) {
+		super(args);
+	}
 
-    public Map<String,String> getArgs()
-    {
-        return args;
-    }
-    public void init(Map<String,String> args)
-    {
-        this.args = args;
-    }
     public LCCallNoFilter create(TokenStream input)
     {
         return new LCCallNoFilter(input);
