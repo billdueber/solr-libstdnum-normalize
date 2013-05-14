@@ -5,23 +5,19 @@
 
 package edu.umich.lib.solr.analysis;
 import java.util.Map;
-import org.apache.solr.analysis.BaseTokenFilterFactory;
+import org.apache.lucene.analysis.util.TokenFilterFactory;
 import org.apache.lucene.analysis.TokenStream;
+
 /**
  *
  * @author dueberb
  */
-public class ISBNLongifierFilterFactory extends BaseTokenFilterFactory {
-    Map<String,String> args;
+public final class ISBNLongifierFilterFactory extends TokenFilterFactory {
+	
+	protected ISBNLongifierFilterFactory(Map<String, String> args) {
+		super(args);
+	}
 
-    public Map<String,String> getArgs()
-    {
-        return args;
-    }
-    public void init(Map<String,String> args)
-    {
-        this.args = args;
-    }
     public ISBNLongifierFilter create(TokenStream input)
     {
         return new ISBNLongifierFilter(input);
