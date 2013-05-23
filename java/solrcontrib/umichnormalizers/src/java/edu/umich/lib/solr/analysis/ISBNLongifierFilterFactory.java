@@ -12,12 +12,13 @@ import org.apache.lucene.analysis.TokenStream;
  *
  * @author dueberb
  */
-public final class ISBNLongifierFilterFactory extends TokenFilterFactory {
+public class ISBNLongifierFilterFactory extends TokenFilterFactory {
 	
-	protected ISBNLongifierFilterFactory(Map<String, String> args) {
+	public ISBNLongifierFilterFactory(Map<String, String> args) {
 		super(args);
 	}
 
+	@Override
     public ISBNLongifierFilter create(TokenStream input)
     {
         return new ISBNLongifierFilter(input);

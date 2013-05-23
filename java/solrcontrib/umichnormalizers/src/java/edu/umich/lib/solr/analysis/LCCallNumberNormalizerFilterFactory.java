@@ -14,10 +14,11 @@ import org.apache.lucene.analysis.TokenStream;
  */
 public class LCCallNumberNormalizerFilterFactory extends TokenFilterFactory {
 	
-    protected LCCallNumberNormalizerFilterFactory(Map<String, String> args) {
+    public LCCallNumberNormalizerFilterFactory(Map<String, String> args) {
 		super(args);
 	}
 
+    @Override
     public LCCallNoFilter create(TokenStream input)
     {
         return new LCCallNoFilter(input);
