@@ -5,10 +5,11 @@ import org.apache.lucene.analysis.TokenStream;
 
 public class LCCNNormalizerFilterFactory extends TokenFilterFactory
 {
-    protected LCCNNormalizerFilterFactory(Map<String, String> args) {
-		super(args);
-	}
-    
+    public LCCNNormalizerFilterFactory(Map<String, String> args) {
+        super(args);
+    }
+   
+    @Override 
     public LCCNNormalizerFilter create(TokenStream input)
     {
         return new LCCNNormalizerFilter(input);
