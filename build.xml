@@ -17,7 +17,7 @@
     limitations under the License.
  -->
 
-<project name="solr-umichnormalizers" default="default">
+<project name="solr-libstdnum-normalize" default="default">
 
   <description>
     LCCN/ISBN normalizer filters

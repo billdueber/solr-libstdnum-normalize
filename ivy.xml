@@ -17,7 +17,7 @@
    under the License.    
 -->
 <ivy-module version="2.0">
-    <info organisation="org.apache.solr" module="umichnormalizers"/>
+    <info organisation="org.apache.solr" module="solr-libstdnum-normalize"/>
     <dependencies>
       <exclude org="*" ext="*" matcher="regexp" type="${ivy.exclude.types}"/>
     </dependencies>
