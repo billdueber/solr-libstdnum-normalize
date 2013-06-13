@@ -30,7 +30,7 @@
   </parent>
 
   <groupId>edu.umich.lib.solr</groupId>
-  <artifactId>solr-umichnormalizers</artifactId>
+  <artifactId>solr-libstdnum-normalize</artifactId>
   <name>Apache Solr Library Datatype normalizers</name>
   <version>@maven_version@</version>
   <description>Text filters for library datatypes</description>
