@@ -45,7 +45,7 @@ Many library standard numbers have very flexible syntax (e.g., ISBNs can have da
 
 <fieldType name="LCCNNormalized" class="solr.TextField"  omitNorms="true">
    <analyzer>
-     <tokenizer class="solr.PatternTokenizerFactory" pattern="[;,]\s*" />         
+ ig    <tokenizer class="solr.PatternTokenizerFactory" pattern="[;,]\s*" />         
      <filter class="edu.umich.lib.solr.analysis.LCCNNormalizerFilterFactory"/> 
    </analyzer>
 </fieldType>
@@ -61,7 +61,7 @@ Many library standard numbers have very flexible syntax (e.g., ISBNs can have da
 
 ## Building the jar file
 
-If for whatever reason you want to integrate this into your own Solr build process, it's easy to do so (thanks to Jay Lurker, Jonathan Rochkind, and Adam Constabaris for the work to make this happen). 
+If for whatever reason you want to integrate this into your own Solr build process, it's easy to do so (thanks to Jay Luker, Jonathan Rochkind, and Adam Constabaris for the work to make this happen). 
 
 * Clone the repo into `solr/contrib`
 * Run `ant jar`
