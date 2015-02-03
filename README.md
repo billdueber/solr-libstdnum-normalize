@@ -1,5 +1,7 @@
 # solr-libstdnum-normalize : Normalize ISBN/LCCN
 
+**DEPRECATED**. Use [https://github.com/billdueber/umich_solr_library_filters](https://github.com/billdueber/umich_solr_library_filters) instead.
+
 The package contains two solr text filters for people who use Solr and want to more intelligently deal with library data types (currently, just ISBNs and LCCNs). 
 
 * `edu.umich.lib.solr.analysis.LCCNNormalizerFilterFactory` will attempt to normalize a token as an LCCN, as specified in the document at http://www.loc.gov/marc/lccn-namespace.html. 
